@@ -33,7 +33,9 @@ const App = () => {
               >
                 <input type="text" className="form-control" alwaysShowCalendars={true} />
               </DateRangePicker>
-              <img className='imgContainerSearch' src={iconSearch} alt="Buscar" height="22px" width="22px" />
+              <div className='pp'>
+                <img className='imgContainerSearch' src={iconSearch} alt="Buscar" height="15px" width="15px" />
+              </div>
             </div>
           </nav>
           <h4>Results: {mails.length} mail(s)</h4>
