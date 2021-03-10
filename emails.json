@@ -1,0 +1,100 @@
+{
+    "emails": [
+      {
+        "from": "xxxx@hotmail.com",
+        "tos": [
+            {
+            "to": "yyyyy@gmail.com"
+            },
+            {
+            "to": "xxxx@gmail.com"
+            }
+        ],
+        "subject": "E-mail de prueba",
+        "files": [
+          {
+            "file_id": "1",
+            "file_name": "xxx.pdf"
+          },
+          {
+            "file_id": "2",
+            "file_name": "xxy.pdf"
+          }
+        ],
+        "date": "2021-03-18T04:00:00.000Z"
+      },
+      {
+        "from": "xxxx@hotmail.com",
+        "tos": [
+                  {
+                    "to": "yyyyy@gmail.com"
+                  },
+                  {
+                    "to": "xxxx@gmail.com"
+                  }
+                ],
+        "subject": "E-mail de prueba",
+        "files": [
+          {
+            "file_id": "1",
+            "file_name": "xxx.pdf"
+          },
+          {
+            "file_id": "2",
+            "file_name": "xxy.pdf"
+          }
+        ],
+        "date": "2021-03-18T04:00:00.000Z"
+      },
+      {
+        "from": "xxxx@hotmail.com",
+        "tos": [
+                  {
+                    "to": "yyyyy@gmail.com"
+                  },
+                  {
+                    "to": "xxxx@gmail.com"
+                  },
+                  {
+                    "to": "xxxx@gmail.com"
+                  }
+                ],
+        "subject": "E-mail de prueba",
+        "files": [
+          {
+            "file_id": "1",
+            "file_name": "xxx.pdf"
+          },
+          {
+            "file_id": "2",
+            "file_name": "xxy.pdf"
+          }
+        ],
+        "date": "2021-03-18T04:00:00.000Z"
+      },
+      {
+        "from": "xxxx@hotmail.com",
+        "tos": [
+                  {
+                    "to": "yyyyy@gmail.com"
+                  }
+                ],
+        "subject": "E-mail de prueba",
+        "files": [
+        ],
+        "date": "2021-03-18T04:00:00.000Z"
+      },
+      {
+        "from": "xxxx@hotmail.com",
+        "tos": [
+                  {
+                    "to": "yyyyy@gmail.com"
+                  }
+                ],
+        "subject": "E-mail de prueba",
+        "files": [
+        ],
+        "date": "2021-03-18T04:00:00.000Z"
+      }
+    ]
+  }
