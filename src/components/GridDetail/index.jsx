@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
+import moment from 'moment'
 
 const GridDetail = ({ from, tos, subject, date}) => {
+    const dateFormat = moment(date).format('L')
     return (
         <Grid container           
         direction="row"
@@ -18,7 +20,7 @@ const GridDetail = ({ from, tos, subject, date}) => {
                     <div className='divSubjectDetail'>{subject}</div>
                 </Grid>
                 <Grid item>
-                    <div className='divDateDetail'>{date}</div>
+                    <div className='divDateDetail'>{dateFormat}</div>
                 </Grid>
         </Grid>
     )

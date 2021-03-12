@@ -88,7 +88,7 @@ hr {
 }
 
 .divDate {
-  width: 50px;
+  width: 70px;
   padding: 10px;
   background-color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
@@ -106,6 +106,7 @@ hr {
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
+  border-color: lightgray;
   border-style: solid;
   border-width:1px; 
   border-left: none; 
@@ -119,6 +120,7 @@ hr {
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
+  border-color: lightgray;
   border-style: solid;
   border-width:1px; 
   border-left: none; 
@@ -132,6 +134,7 @@ hr {
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
+  border-color: lightgray;
   border-style: solid;
   border-width:1px; 
   border-left: none; 
@@ -140,11 +143,12 @@ hr {
 }
 
 .divDateDetail {
-  width: 50px;
+  width: 70px;
   padding: 10px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
+  border-color: lightgray;
   border-style: solid;
   border-width:1px; 
   border-left: none; 
