@@ -5,7 +5,7 @@ const GridHeader = () => {
     return (
         <Grid container           
         direction="row"
-        justify="left"
+        justify="flex-start"
         alignItems="center">
                 <Grid item>
                     <div className='divFrom'>From</div>
@@ -15,6 +15,9 @@ const GridHeader = () => {
                 </Grid>
                 <Grid item>
                     <div className='divSubject'>Subject</div>
+                </Grid>
+                <Grid item>
+                    <div className='divAttach'> </div>
                 </Grid>
                 <Grid item>
                     <div className='divDate'>Date</div>

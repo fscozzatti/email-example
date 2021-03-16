@@ -2,13 +2,16 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import DateFormat from './../DateFormat'
+import iconAttach from './../../images/icon_clip.svg';
 
-const GridDetail = ({ from, tos, subject, date}) => {
+const GridDetail = ({ from, tos, subject, date, files}) => {
+    var haveFiles = false
+    if ( files ){haveFiles = true}
 
     return (
         <Grid container           
         direction="row"
-        justify="left"
+        justify="flex-start"
         alignItems="center">
                 <Grid item>
                     <div className='divFromDetail'>{from}</div>
@@ -18,6 +21,9 @@ const GridDetail = ({ from, tos, subject, date}) => {
                 </Grid>
                 <Grid item>
                     <div className='divSubjectDetail'>{subject}</div>
+                </Grid>
+                <Grid item>
+                    <div className='divAttachDetail'>{haveFiles && <img className='imgContainerAttach' src={iconAttach} alt="Buscar" height="15px" width="15px" />}</div>
                 </Grid>
                 <Grid item>
                     <DateFormat date={date}/>
@@ -34,12 +40,6 @@ GridDetail.propTypes = {
         }).isRequired,
     ),
     subject: PropTypes.string.isRequired,
-    files: PropTypes.arrayOf(
-        PropTypes.shape({
-            file_id: PropTypes.string.isRequired,
-            file_name: PropTypes.string.isRequired,
-        }),
-    ),
     date: PropTypes.string.isRequired,
 }
 

@@ -10,7 +10,9 @@ import GridDetail from './../GridDetail'
 const MailList = ({ mails, hasMails }) => {
     const mails2 = mails.map((mail, i) => {
         return (
-          <GridDetail from={mail.from} tos={mail.tos} subject={mail.subject} date={mail.date}></GridDetail>
+          <div className="col-md-12" key={mail.from}>
+            <GridDetail from={mail.from} tos={mail.tos} subject={mail.subject} date={mail.date} files={mail.files}></GridDetail>
+          </div>
         )
       })
     return (
@@ -47,12 +49,6 @@ MailList.propTypes = {
                 }).isRequired,
             ),
             subject: PropTypes.string.isRequired,
-            files: PropTypes.arrayOf(
-                PropTypes.shape({
-                    file_id: PropTypes.string.isRequired,
-                    file_name: PropTypes.string.isRequired,
-                }),
-            ),
             date: PropTypes.string.isRequired,
         })
     ).isRequired,
