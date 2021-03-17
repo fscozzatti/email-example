@@ -18,23 +18,25 @@ const MailList = ({ mails, hasMails }) => {
     return (
         <div className='divMainContainer'>
           <nav>
-            <div className='divContainer1'>
+            <div class="input-group mb-3 col-4" >
               <img className='imgContainerCalendar' src={iconCalender} alt="Buscar" height="22px" width="22px" />
               <DateRangePicker
                 initialSettings={{ startDate: '03/01/2021', endDate: '03/15/2021' }}
               >
                 <input type="text" className="form-control" />
               </DateRangePicker>
-              <button type="button" className='buttonSearch'> 
-                <img className='imgContainerSearch' src={iconSearch} alt="Buscar" height="15px" width="15px" />
-              </button>
+              <div class="input-group-append">
+                  <button type="button" className='btn btn-light'> 
+                    <img className='imgContainerSearch' src={iconSearch} alt="Buscar" height="20px" width="20px" />
+                  </button>
+              </div>
             </div>
           </nav>
           <h4>Results: {mails2.length} mail(s)</h4>
           { !hasMails && <hr></hr>}
           { !hasMails && <img className='imgLogoContainer' src={iconLogo} alt="" height="150px" width="150px" />}
           { hasMails && <GridHeader/>}
-          { hasMails && <div>{mails2}</div>}
+          { hasMails && <div>{mails2}</div>}    
         </div>
       )
 }
