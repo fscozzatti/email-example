@@ -5,7 +5,7 @@ const ImageAttach = ({ files }) => {
     var haveFiles = false
     if ( files ){haveFiles = true}
     return (
-    <div className='divAttachDetail'>
+    <div>
         {haveFiles && <img className='imgContainerAttach' src={iconAttach} alt="Buscar" height="15px" width="15px" />}
     </div>
     )

@@ -20,9 +20,12 @@ code {
   vertical-align: middle;
 }
 
+.imgContainerMail {
+  vertical-align: top;
+}
+
 .imgContainerCalendar {
-  vertical-align: bottom;
-  border-radius: 10%;
+ padding-top: 5px;
 }
 
 .divContainer1 {
@@ -38,22 +41,16 @@ code {
 }
 
 hr {
-  width: 100%;
   background-color: whitesmoke; 
 }
 
 .imgLogoContainer {
   display:block;
   margin:auto;
-  padding: 150px;
-}
 
-.imgContainerAttach {
-  padding-top: 10px;
 }
 
 .divFrom {
-  width: 150px;
   padding: 10px;
   background-color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
@@ -66,7 +63,6 @@ hr {
 }
 
 .divTo {
-  width: 200px;
   padding: 10px;
   background-color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
@@ -79,7 +75,6 @@ hr {
 }
 
 .divSubject {
-  width: 365px;
   padding: 10px;
   background-color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
@@ -91,10 +86,7 @@ hr {
   border-right: none;
 }
 
-
-
 .divDate {
-  width: 115px;
   padding: 10px;
   background-color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
@@ -107,7 +99,6 @@ hr {
 }
 
 .divFromDetail {
-  width: 150px;
   padding: 10px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -121,7 +112,6 @@ hr {
 }
 
 .divToDetail {
-  width: 180px;
   padding: 10px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -135,8 +125,8 @@ hr {
 }
 
 .divBadge {
-  width: 20px;
-  height: 39px;
+  height: 45px;
+  padding-top: 10px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
@@ -149,7 +139,6 @@ hr {
 }
 
 .divSubjectDetail {
-  width: 350px;
   padding: 10px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -163,8 +152,7 @@ hr {
 }
 
 .divDateDetail {
-  width: 120px;
-  padding: 10px;
+  height: 45px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
@@ -178,8 +166,8 @@ hr {
 
 
 .divAttachDetail {
-  width: 15px;
-  height: 39px;
+  height: 45px;
+  padding: 10px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   color: black;

@@ -3,26 +3,27 @@ import Grid from '@material-ui/core/Grid'
 
 const GridHeader = () => {
     return (
-        <Grid container           
-        direction="row"
-        justify="flex-start"
-        alignItems="center">
-                <Grid item>
-                    <div className='divFrom'>From</div>
+        <div className="container-fluid">
+            <div className="row">
+                <Grid container           
+                direction="row"
+                justify="center"
+                alignItems="center">
+                        <Grid className='col-2 divFrom' item>
+                            From
+                        </Grid>
+                        <Grid className='col-4 divTo' item>
+                            To
+                        </Grid>
+                        <Grid className='col-5 divSubject' item>
+                            Subject
+                        </Grid>
+                        <Grid className='col-1 divDate' item>
+                            Date
+                        </Grid>
                 </Grid>
-                <Grid item>
-                    <div className='divTo'>To</div>
-                </Grid>
-                <Grid item>
-                    <div className='divSubject'>Subject</div>
-                </Grid>
-                <Grid item>
-                    <div className='divAttach'> </div>
-                </Grid>
-                <Grid item>
-                    <div className='divDate'>Date</div>
-                </Grid>
-        </Grid>
+            </div>
+        </div>
     )
 }
 

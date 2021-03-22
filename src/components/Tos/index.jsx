@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const Tos = ({ tos }) => {
     var to = tos.length
     return (
-        <div className='divBadge'>
+        <div>
             {(to!==1) && 
             <span className="badge badge-secondary">
                 +{to - 1 }

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import moment from 'moment'
 
 const DateFormat = ({date}) => {
-    const dateFormat = moment(date).format('ll')
+    const dateFormat = moment(date).format('L')
 
     return (
-        <div className='divDateDetail'> 
+        <div> 
             {dateFormat}
         </div>
     )
