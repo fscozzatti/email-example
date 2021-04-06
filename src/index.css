@@ -49,8 +49,7 @@ hr {
   margin:auto;
 
 }
-
-.divFrom {
+.divHeader {
   padding: 10px;
   background-color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
@@ -62,43 +61,8 @@ hr {
   border-right: none;
 }
 
-.divTo {
-  padding: 10px;
-  background-color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: gray;
-  border-style: solid;
-  border-width:2px; 
-  border-left: none; 
-  border-right: none;
-}
 
-.divSubject {
-  padding: 10px;
-  background-color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: gray;
-  border-style: solid;
-  border-width:2px; 
-  border-left: none; 
-  border-right: none;
-}
-
-.divDate {
-  padding: 10px;
-  background-color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: gray;
-  border-style: solid;
-  border-width:2px; 
-  border-left: none; 
-  border-right: none;
-}
-
-.divFromDetail {
+.divDetail {
   padding: 10px;
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -109,19 +73,9 @@ hr {
   border-left: none; 
   border-right: none;
   border-top: none;
-}
-
-.divToDetail {
-  padding: 10px;
-  background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  border-color: lightgray;
-  border-style: solid;
-  border-width:1px; 
-  border-left: none; 
-  border-right: none;
-  border-top: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .divBadge {
@@ -136,23 +90,6 @@ hr {
   border-left: none; 
   border-right: none;
   border-top: none;
-}
-
-.divSubjectDetail {
-  padding: 10px;
-  background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  color: black;
-  border-color: lightgray;
-  border-style: solid;
-  border-width:1px; 
-  border-left: none; 
-  border-right: none;
-  border-top: none;
-
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .divDateDetail {

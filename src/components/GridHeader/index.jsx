@@ -9,16 +9,16 @@ const GridHeader = () => {
                 direction="row"
                 justify="center"
                 alignItems="center">
-                        <Grid className='col-2 divFrom' item>
+                        <Grid className='col-2 divHeader' item>
                             From
                         </Grid>
-                        <Grid className='col-4 divTo' item>
+                        <Grid className='col-4 divHeader' item>
                             To
                         </Grid>
-                        <Grid className='col-5 divSubject' item>
+                        <Grid className='col-5 divHeader' item>
                             Subject
                         </Grid>
-                        <Grid className='col-1 divDate' item>
+                        <Grid className='col-1 divHeader' item>
                             Date
                         </Grid>
                 </Grid>

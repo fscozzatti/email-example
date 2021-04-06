@@ -36,16 +36,16 @@ const GridDetail = ({ from, tos, subject, date, files}) => {
                                 <Tos tos={tos}></Tos>
                             </Grid>
                         </div> 
-                        <Grid className='col-md-2 d-none d-md-block divFromDetail' item>
+                        <Grid className='col-md-2 d-none d-md-block divDetail' item>
                             {from}
                         </Grid>
-                        <Grid className='col-md-3 d-none d-md-block divToDetail' item>
+                        <Grid className='col-md-3 d-none d-md-block divDetail' item>
                             {tos[0].to}            
                         </Grid>
                         <Grid className='col-md-1 d-none d-md-block divBadge' item>
                             <Tos tos={tos}></Tos>
                         </Grid>
-                        <Grid className='col-sm-12 col-md-4 divSubjectDetail' item>
+                        <Grid className='col-sm-12 col-md-4 divDetail' item>
                             {subject}
                         </Grid>
                         <Grid className='col-md-1 d-none d-md-block divAttachDetail' item>
