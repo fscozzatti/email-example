@@ -4,11 +4,11 @@ import AppFrame from './../components/AppFrame'
 import MailList from './../components/MailList'
 
 
-const MainPage = ({ mails, hasMails }) => {
+const MainPage = ({ mails, hasMails, onSetQ, onSetX, onSearchB }) => {
 
     return (
         <AppFrame>
-            <MailList mails={mails} hasMails={hasMails}>
+            <MailList mails={mails} hasMails={hasMails} onSetQ={onSetQ} onSetX={onSetX}>
 
             </MailList>
         </AppFrame>
@@ -35,6 +35,8 @@ MainPage.propTypes = {
         })
     ).isRequired,
     hasMails: PropTypes.bool.isRequired,
+    onSetQ: PropTypes.func.isRequired,
+    onSetX: PropTypes.func.isRequired,
 }
 
 export default MainPage

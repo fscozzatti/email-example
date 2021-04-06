@@ -7,7 +7,12 @@ import iconLogo from './../../images/logo.png'
 import GridHeader from './../GridHeader'
 import GridDetail from './../GridDetail'
 
-const MailList = ({ mails, hasMails }) => {
+const MailList = ({ mails, hasMails, onSetQ, onSetX }) => {
+    const handleEvent = (event, picker) => {
+      onSetQ(picker.startDate._d)
+      onSetX(picker.endDate._d)
+
+    }
     const mails2 = mails.map((mail, i) => {
         return (
           <div key={mail.from}>
@@ -15,6 +20,7 @@ const MailList = ({ mails, hasMails }) => {
           </div>
         )
       })
+
     return (
         <div className="container-fluid py-5">
             <div className="row">
@@ -23,6 +29,7 @@ const MailList = ({ mails, hasMails }) => {
                   <img className='imgContainerCalendar' src={iconCalender} alt="Buscar" height="22px" width="22px" />
                   <DateRangePicker
                     initialSettings={{ startDate: '03/01/2021', endDate: '03/15/2021' }}
+                    onApply={(event,picker) => handleEvent(event,picker)}
                   >
                     <input type="text" className="form-control" />
                   </DateRangePicker>
@@ -57,6 +64,8 @@ MailList.propTypes = {
         })
     ).isRequired,
     hasMails: PropTypes.bool.isRequired,
+    onSetQ: PropTypes.func.isRequired,
+    onSetX: PropTypes.func.isRequired,
 }
 
 export default MailList

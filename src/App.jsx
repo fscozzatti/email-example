@@ -1,6 +1,7 @@
 import React, { useEffect, useState }  from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import axios from 'axios'
+import moment from 'moment'
 import MainPage from './pages/MainPage'
 
 
@@ -8,6 +9,8 @@ const App = () => {
   
     const [mails, setMails] = useState([])
     const [hasMails, setHasMails] = useState(false)
+    const [q , setQ ] = useState("")
+    const [x , setX ] = useState("")
   
     useEffect(() => {  
       async function fetchData() {
@@ -28,11 +31,22 @@ const App = () => {
       
       }, []);
 
+      function searchB(rows) {
+        var dateIni = moment(q).format('MM-DD-YYYY')
+        var dateFin = moment(x).format('MM-DD-YYYY')
+        if (!q && !x) {
+          return mails }
+        else {
+          return mails.filter((row) => 
+            moment(row.date).format('MM-DD-YYYY') >= dateIni && moment(row.date).format('MM-DD-YYYY') <=  dateFin )
+        }
+        //
+      }
 
     return (
       <Router>
           <Route exact path="/">
-              <MainPage mails={mails} hasMails={hasMails}>
+              <MainPage mails={searchB(mails)} hasMails={hasMails} onSetQ= {(q) => setQ(q)} onSetX= {(x) => setX(x)}>
               </MainPage>
           </Route>
       </Router>
