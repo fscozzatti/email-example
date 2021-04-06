@@ -149,6 +149,10 @@ hr {
   border-left: none; 
   border-right: none;
   border-top: none;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .divDateDetail {

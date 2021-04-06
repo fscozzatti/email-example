@@ -79,7 +79,7 @@
                     "to": "yyyyy@gmail.com"
                   }
                 ],
-        "subject": "E-mail de prueba",
+        "subject": "E-mail de prueba con descripción larga para ver como se lee",
         "files": [
         ],
         "date": "2021-03-14T04:00:00.000Z"
@@ -91,7 +91,7 @@
                     "to": "yyyyy@gmail.com"
                   }
                 ],
-        "subject": "E-mail de prueba",
+        "subject": "E-mail de prueba con descripción un poco mas larga para ver como se visualiza y arreglar algo en caso de verlo mal",
         "files": [
         ],
         "date": "2021-03-12T04:00:00.000Z"
