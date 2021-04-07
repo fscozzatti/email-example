@@ -9,7 +9,7 @@ import GridHeader from './../GridHeader'
 import GridDetail from './../GridDetail'
 import EmailCompleteInfo from './../EmailCompleteInfo'
 
-const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal, onSetSelectedMail }) => {
+const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal, onSetSelectedMail, selectedMail }) => {
     const handleEvent = (event, picker) => {
       onSetQ(picker.startDate._d)
       onSetX(picker.endDate._d)
@@ -21,7 +21,7 @@ const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal, onSetSel
           <div key={mail.from}>
             <GridDetail from={mail.from} tos={mail.tos} subject={mail.subject} date={mail.date}
              files={mail.files} onSetModal={onSetModal} modal={modal}
-             onSetSelectedMail={onSetSelectedMail} id={mail.id}></GridDetail>
+             onSetSelectedMail={onSetSelectedMail} id={mail.id} mails={mails}></GridDetail>
           </div>
         )
       })
@@ -56,7 +56,7 @@ const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal, onSetSel
           <Modal isOpen={modal} toggle={toggle}>
               <ModalHeader toggle={toggle}>Email Previsualization</ModalHeader>
               <ModalBody>
-              <EmailCompleteInfo></EmailCompleteInfo>
+              <EmailCompleteInfo mail={selectedMail}></EmailCompleteInfo>
               </ModalBody>
               <ModalFooter>
               <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
@@ -86,6 +86,24 @@ MailList.propTypes = {
     onSetX: PropTypes.func.isRequired,
     onSetModal: PropTypes.func.isRequired,
     modal: PropTypes.bool.isRequired,
+    onSetSelectedMail: PropTypes.func.isRequired,
+    selectedMail: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        from: PropTypes.string.isRequired,
+        tos: PropTypes.arrayOf(
+            PropTypes.shape({
+                to: PropTypes.string.isRequired,
+            }).isRequired,
+        ),
+        subject: PropTypes.string.isRequired,
+        files: PropTypes.arrayOf(
+            PropTypes.shape({
+                file_id: PropTypes.string.isRequired,
+                file_name: PropTypes.string.isRequired,
+            }),
+        ),
+        date: PropTypes.string.isRequired,
+    })
 }
 
 export default MailList

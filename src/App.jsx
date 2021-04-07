@@ -50,7 +50,7 @@ const App = () => {
           <Route exact path="/">
               <MainPage mails={searchB(mails)} hasMails={hasMails} onSetQ= {(q) => setQ(q)}
                onSetX= {(x) => setX(x)} onSetModal={() => setModal(!modal)}
-                modal={modal} onSetSelectedMail={(mail) => setSelectedMail(mail)}>
+                modal={modal} onSetSelectedMail={(mail) => setSelectedMail(mail)} selectedMail={selectedMail}>
               </MainPage>
           </Route>
       </Router>

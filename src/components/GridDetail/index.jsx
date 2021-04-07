@@ -8,9 +8,11 @@ import iconMailSp from './../../images/icon_mail_sp.svg';
 
 
 
-const GridDetail = ({ from, tos, subject, date, files, onSetModal, modal, onSetSelectedMail, id}) => {
+const GridDetail = ({ from, tos, subject, date, files, onSetModal, modal, onSetSelectedMail, id, mails}) => {
 
-    const toggle = (id) => { 
+    const toggle = () => { 
+        const mail = mails.find( m => m.id === id)
+        onSetSelectedMail(mail)
         onSetModal(!modal);}
 
     
@@ -76,6 +78,25 @@ GridDetail.propTypes = {
     date: PropTypes.string.isRequired,
     onSetModal: PropTypes.func.isRequired,
     modal: PropTypes.bool.isRequired,
+    onSetSelectedMail: PropTypes.func.isRequired,
+    id: PropTypes.number.isRequired,
+    selectedMail: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        from: PropTypes.string.isRequired,
+        tos: PropTypes.arrayOf(
+            PropTypes.shape({
+                to: PropTypes.string.isRequired,
+            }).isRequired,
+        ),
+        subject: PropTypes.string.isRequired,
+        files: PropTypes.arrayOf(
+            PropTypes.shape({
+                file_id: PropTypes.string.isRequired,
+                file_name: PropTypes.string.isRequired,
+            }),
+        ),
+        date: PropTypes.string.isRequired,
+    })
 }
 
 export default GridDetail
