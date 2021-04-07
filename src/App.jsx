@@ -11,6 +11,7 @@ const App = () => {
     const [hasMails, setHasMails] = useState(false)
     const [q , setQ ] = useState("")
     const [x , setX ] = useState("")
+    const [modal, setModal] = useState(false);
   
     useEffect(() => {  
       async function fetchData() {
@@ -42,11 +43,11 @@ const App = () => {
         }
         //
       }
-
+      
     return (
       <Router>
           <Route exact path="/">
-              <MainPage mails={searchB(mails)} hasMails={hasMails} onSetQ= {(q) => setQ(q)} onSetX= {(x) => setX(x)}>
+              <MainPage mails={searchB(mails)} hasMails={hasMails} onSetQ= {(q) => setQ(q)} onSetX= {(x) => setX(x)} onSetModal={() => setModal(!modal)} modal={modal}>
               </MainPage>
           </Route>
       </Router>

@@ -7,16 +7,17 @@ import iconLogo from './../../images/logo.png'
 import GridHeader from './../GridHeader'
 import GridDetail from './../GridDetail'
 
-const MailList = ({ mails, hasMails, onSetQ, onSetX }) => {
+const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal }) => {
     const handleEvent = (event, picker) => {
       onSetQ(picker.startDate._d)
       onSetX(picker.endDate._d)
 
     }
+    
     const mails2 = mails.map((mail, i) => {
         return (
           <div key={mail.from}>
-            <GridDetail from={mail.from} tos={mail.tos} subject={mail.subject} date={mail.date} files={mail.files}></GridDetail>
+            <GridDetail from={mail.from} tos={mail.tos} subject={mail.subject} date={mail.date} files={mail.files} onSetModal={onSetModal}modal={modal}></GridDetail>
           </div>
         )
       })
@@ -45,7 +46,7 @@ const MailList = ({ mails, hasMails, onSetQ, onSetX }) => {
               { !hasMails && <div className="col-12"><img className='imgLogoContainer' src={iconLogo} alt="" height="150px" width="150px" /></div>}
               { hasMails && <GridHeader/>}
               { hasMails && <div className="col-12">{ mails2 }</div> }   
-          </div>
+          </div>  
         </div>
       )
 }
@@ -66,6 +67,8 @@ MailList.propTypes = {
     hasMails: PropTypes.bool.isRequired,
     onSetQ: PropTypes.func.isRequired,
     onSetX: PropTypes.func.isRequired,
+    onSetModal: PropTypes.func.isRequired,
+    modal: PropTypes.bool.isRequired,
 }
 
 export default MailList
