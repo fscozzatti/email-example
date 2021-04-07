@@ -4,11 +4,13 @@ import AppFrame from './../components/AppFrame'
 import MailList from './../components/MailList'
 
 
-const MainPage = ({ mails, hasMails, onSetQ, onSetX, onSearchB, onSetModal, modal }) => {
+const MainPage = ({ mails, hasMails, onSetQ, onSetX, onSearchB, onSetModal, modal, onSetSelectedMail }) => {
 
     return (
         <AppFrame>
-            <MailList mails={mails} hasMails={hasMails} onSetQ={onSetQ} onSetX={onSetX} onSetModal={onSetModal} modal={modal}>
+            <MailList mails={mails} hasMails={hasMails} onSetQ={onSetQ}
+             onSetX={onSetX} onSetModal={onSetModal}
+              modal={modal} onSetSelectedMail={onSetSelectedMail} >
 
             </MailList>
         </AppFrame>

@@ -1,13 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DateRangePicker from 'react-bootstrap-daterangepicker'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import iconSearch from './../../images/icon_search.svg';
 import iconCalender from './../../images/icon_calender.svg';
 import iconLogo from './../../images/logo.png'
 import GridHeader from './../GridHeader'
 import GridDetail from './../GridDetail'
+import EmailCompleteInfo from './../EmailCompleteInfo'
 
-const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal }) => {
+const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal, onSetSelectedMail }) => {
     const handleEvent = (event, picker) => {
       onSetQ(picker.startDate._d)
       onSetX(picker.endDate._d)
@@ -17,10 +19,14 @@ const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal }) => {
     const mails2 = mails.map((mail, i) => {
         return (
           <div key={mail.from}>
-            <GridDetail from={mail.from} tos={mail.tos} subject={mail.subject} date={mail.date} files={mail.files} onSetModal={onSetModal}modal={modal}></GridDetail>
+            <GridDetail from={mail.from} tos={mail.tos} subject={mail.subject} date={mail.date}
+             files={mail.files} onSetModal={onSetModal} modal={modal}
+             onSetSelectedMail={onSetSelectedMail} id={mail.id}></GridDetail>
           </div>
         )
       })
+
+    const toggle = () =>  onSetModal(!modal);
 
     return (
         <div className="container-fluid py-5">
@@ -46,7 +52,17 @@ const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal }) => {
               { !hasMails && <div className="col-12"><img className='imgLogoContainer' src={iconLogo} alt="" height="150px" width="150px" /></div>}
               { hasMails && <GridHeader/>}
               { hasMails && <div className="col-12">{ mails2 }</div> }   
-          </div>  
+          </div> 
+          <Modal isOpen={modal} toggle={toggle}>
+              <ModalHeader toggle={toggle}>Email Previsualization</ModalHeader>
+              <ModalBody>
+              <EmailCompleteInfo></EmailCompleteInfo>
+              </ModalBody>
+              <ModalFooter>
+              <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
+              <Button color="secondary" onClick={toggle}>Cancel</Button>
+              </ModalFooter>
+          </Modal>
         </div>
       )
 }

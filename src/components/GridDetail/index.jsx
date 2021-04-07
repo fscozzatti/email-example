@@ -1,17 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import DateFormat from './../DateFormat'
 import ImageAttach from './../ImageAttach'
 import Tos from './../Tos'
 import iconMailSp from './../../images/icon_mail_sp.svg';
-import EmailCompleteInfo from './../EmailCompleteInfo'
 
 
-const GridDetail = ({ from, tos, subject, date, files, onSetModal, modal}) => {
 
-    const toggle = () =>  onSetModal(!modal);
+const GridDetail = ({ from, tos, subject, date, files, onSetModal, modal, onSetSelectedMail, id}) => {
+
+    const toggle = (id) => { 
+        onSetModal(!modal);}
+
     
     return (
         <div className="container-fluid">
@@ -51,16 +52,6 @@ const GridDetail = ({ from, tos, subject, date, files, onSetModal, modal}) => {
                         </Grid>
                         <Grid className='col-sm-12 col-md-4 divDetail' item>
                             <a href="#" data-toggle="modal" data-target="exampleModal" onClick={toggle}>{subject}</a>
-                            <Modal isOpen={modal} toggle={toggle}>
-                                <ModalHeader toggle={toggle}>Email Previsualization</ModalHeader>
-                                <ModalBody>
-                                <EmailCompleteInfo></EmailCompleteInfo>
-                                </ModalBody>
-                                <ModalFooter>
-                                <Button color="primary" onClick={toggle}>Do Something</Button>{' '}
-                                <Button color="secondary" onClick={toggle}>Cancel</Button>
-                                </ModalFooter>
-                            </Modal>
                         </Grid>
                         <Grid className='col-md-1 d-none d-md-block divAttachDetail' item>
                             <ImageAttach files={files}></ImageAttach>
