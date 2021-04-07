@@ -6,6 +6,7 @@ import DateFormat from './../DateFormat'
 import ImageAttach from './../ImageAttach'
 import Tos from './../Tos'
 import iconMailSp from './../../images/icon_mail_sp.svg';
+import EmailCompleteInfo from './../EmailCompleteInfo'
 
 
 const GridDetail = ({ from, tos, subject, date, files, onSetModal, modal}) => {
@@ -51,9 +52,9 @@ const GridDetail = ({ from, tos, subject, date, files, onSetModal, modal}) => {
                         <Grid className='col-sm-12 col-md-4 divDetail' item>
                             <a href="#" data-toggle="modal" data-target="exampleModal" onClick={toggle}>{subject}</a>
                             <Modal isOpen={modal} toggle={toggle}>
-                                <ModalHeader toggle={toggle}>modal title</ModalHeader>
+                                <ModalHeader toggle={toggle}>Email Previsualization</ModalHeader>
                                 <ModalBody>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <EmailCompleteInfo></EmailCompleteInfo>
                                 </ModalBody>
                                 <ModalFooter>
                                 <Button color="primary" onClick={toggle}>Do Something</Button>{' '}

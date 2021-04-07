@@ -1,6 +1,7 @@
 {
     "emails": [
       {
+        "id": 1,
         "from": "xxxx@hotmail.com",
         "tos": [
             {
@@ -24,6 +25,7 @@
         "date": "2021-01-11T04:00:00.000Z"
       },
       {
+        "id": 2,
         "from": "yyyy@hotmail.com",
         "tos": [
                   {
@@ -47,6 +49,7 @@
         "date": "2021-02-01T04:00:00.000Z"
       },
       {
+        "id": 3,
         "from": "zzzz@hotmail.com",
         "tos": [
                   {
@@ -73,6 +76,7 @@
         "date": "2021-03-15T14:10:43-03:00"
       },
       {
+        "id": 4,
         "from": "qqqq@hotmail.com",
         "tos": [
                   {
@@ -85,6 +89,7 @@
         "date": "2021-03-14T04:00:00.000Z"
       },
       {
+        "id": 5,
         "from": "wwww@hotmail.com",
         "tos": [
                   {

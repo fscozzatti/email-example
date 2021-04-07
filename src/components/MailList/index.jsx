@@ -13,7 +13,7 @@ const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal }) => {
       onSetX(picker.endDate._d)
 
     }
-    
+
     const mails2 = mails.map((mail, i) => {
         return (
           <div key={mail.from}>
@@ -54,6 +54,7 @@ const MailList = ({ mails, hasMails, onSetQ, onSetX, onSetModal, modal }) => {
 MailList.propTypes = {
     mails: PropTypes.arrayOf(
         PropTypes.shape({
+            id: PropTypes.number.isRequired,
             from: PropTypes.string.isRequired,
             tos: PropTypes.arrayOf(
                 PropTypes.shape({

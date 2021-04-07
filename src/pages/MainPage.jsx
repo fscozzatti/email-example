@@ -18,6 +18,7 @@ const MainPage = ({ mails, hasMails, onSetQ, onSetX, onSearchB, onSetModal, moda
 MainPage.propTypes = {
     mails: PropTypes.arrayOf(
         PropTypes.shape({
+            id: PropTypes.number.isRequired,
             from: PropTypes.string.isRequired,
             tos: PropTypes.arrayOf(
                 PropTypes.shape({
