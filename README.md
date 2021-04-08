@@ -1,3 +1,5 @@
+In the project stay file Mockup.pdf who has specification of the app. Then you have the app based in mockup.pdf
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
